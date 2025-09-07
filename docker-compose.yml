@@ -1,0 +1,18 @@
+
+
+services:
+  google-search:
+    build: .
+    command: python src/mcp/local/google_search_server.py
+    env_file: .env
+    environment:
+      - PYTHONPATH=/app/src
+    ports:
+      - "8000:8000"
+    networks:
+      - mcpnet
+
+networks:
+  mcpnet:
+    driver: bridge
+
