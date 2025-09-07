@@ -1,5 +1,5 @@
 from fastmcp import FastMCP
-from api.google_custom_search.search import google_search
+from src.api.google_custom_search.search import google_search
 
 mcp = FastMCP("google-search")
 
